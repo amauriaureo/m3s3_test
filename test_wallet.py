@@ -1,5 +1,5 @@
 import pytest
-from wallet import Wallet
+from wallet import Wallet, InsufficientAmount
 
 
 @pytest.fixture
@@ -29,3 +29,5 @@ def test_retirar_da_carteira_com_saldo(carteira):
 def test_retirar_da_carteira_sem_saldo_suficiente(carteira):
     carteira.spend_cash(10)
     assert carteira.saldo == 0
+    with pytest.raises(InsufficientAmount):
+        carteira.spend_cash(20)
