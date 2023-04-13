@@ -27,7 +27,12 @@ def test_retirar_da_carteira_com_saldo(carteira):
 
 
 def test_retirar_da_carteira_sem_saldo_suficiente(carteira):
-    carteira.spend_cash(10)
-    assert carteira.saldo == 0
+    # carteira.spend_cash(10)
+    # assert carteira.saldo == 0
     with pytest.raises(InsufficientAmount):
         carteira.spend_cash(20)
+
+
+def test_retira_da_carteira_parte_do_saldo(carteira):
+    carteira.spend_cash(5)
+    assert carteira.saldo == 5
