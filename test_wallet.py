@@ -19,3 +19,8 @@ def test_saldo_inicial_com_parametro(carteira):
 def test_adiciona_saldo(carteira):
     carteira.add_cash(10)
     assert carteira.saldo == 20
+
+
+def test_retirar_da_carteira_com_saldo(carteira):
+    carteira.spend_cash(10)
+    assert carteira.saldo == 1
