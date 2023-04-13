@@ -23,4 +23,9 @@ def test_adiciona_saldo(carteira):
 
 def test_retirar_da_carteira_com_saldo(carteira):
     carteira.spend_cash(10)
-    assert carteira.saldo == 1
+    assert carteira.saldo == 0
+
+
+def test_retirar_da_carteira_sem_saldo_suficiente(carteira):
+    carteira.spend_cash(10)
+    assert carteira.saldo == 0
