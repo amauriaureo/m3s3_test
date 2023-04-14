@@ -8,19 +8,18 @@ def carteira():
 
 
 class TestSaldoInicial:
-
     def test_saldo_inicial_sem_parametro(self):
         carteira = Wallet()
         assert carteira.saldo == 0
-
 
     def test_saldo_inicial_com_parametro(self, carteira):
         assert carteira.saldo == 10
 
 
-def test_adiciona_saldo(carteira):
-    carteira.add_cash(10)
-    assert carteira.saldo == 20
+class TestAdicionaSaldo:
+    def test_adiciona_saldo(self, carteira):
+        carteira.add_cash(10)
+        assert carteira.saldo == 20
 
 
 def test_retirar_da_carteira_com_saldo(carteira):
