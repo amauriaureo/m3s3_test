@@ -27,7 +27,7 @@ class TestRetiraSaldo:
         carteira.spend_cash(10)
         assert carteira.saldo == 0
 
-    def test_retirar_da_carteira_sem_saldo_suficiente(self, arteira):
+    def test_retirar_da_carteira_sem_saldo_suficiente(self, carteira):
         # carteira.spend_cash(10)
         # assert carteira.saldo == 0
         with pytest.raises(InsufficientAmount):
