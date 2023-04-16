@@ -41,3 +41,10 @@ class TestRetiraSaldo:
 def test_auditoria_adiciona_saldo(carteira):
     carteira.add_cash(10)
     assert carteira.auditoria == ["Add 10"]
+
+
+def test_auditoria_adiciona_saldo_2x(carteira):
+    carteira.add_cash(10)
+    carteira.add_cash(20)
+    assert carteira.saldo == 40
+    assert carteira.auditoria == ["Add 10", "Add 20"]
