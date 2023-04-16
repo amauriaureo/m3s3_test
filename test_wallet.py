@@ -36,3 +36,8 @@ class TestRetiraSaldo:
     def test_retira_da_carteira_parte_do_saldo(self, carteira):
         carteira.spend_cash(5)
         assert carteira.saldo == 5
+
+
+def test_auditoria_adiciona_saldo(carteira):
+    carteira.add_cash(10)
+    assert carteira.auditoria == ["Add 10"]
