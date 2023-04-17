@@ -1,4 +1,4 @@
-def calculo_desconto():
+if __name__ == '__main__':
     valor_unitario = float(input('Valor unitário do produto: '))
     quantidade = int(input('Quantidade: '))
     desconto = 1
