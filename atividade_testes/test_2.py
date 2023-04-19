@@ -51,8 +51,8 @@ def pedido_lanchonete(codigo, bis):
             continue
 
         print('Deseja pedir mais alguma coisa?')
-        print('1 - Sim')
-        print('2 - Não')
+        print('1 - Sim.')
+        print('2 - Não.')
 
         if bis == 2:
             break
