@@ -91,8 +91,8 @@ def test_x_tudo():
 
 
 def test_refri():
-    assert pedido_lanchonete(106, 2) == 'O total a ser pago é: 5.00 R$'
+    assert pedido_lanchonete(200, 2) == 'O total a ser pago é: 5.00 R$'
 
 
 def test_cha_gelado():
-    assert pedido_lanchonete(107, 2) == 'O total a ser pago é: 4.00 R$'
+    assert pedido_lanchonete(201, 2) == 'O total a ser pago é: 4.00 R$'
