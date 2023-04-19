@@ -1,5 +1,6 @@
 import pytest
 
+
 def pedido_lanchonete(codigo, bis):
     cardapio = """
     *******************Cardápio*******************
@@ -64,34 +65,34 @@ def test_cardapio_tudo_funcionando():
     assert pedido_lanchonete(105,2) == 'O total a ser pago é: 17.00 R$'
 
 
-def cachorro_quente():
+def test_cachorro_quente():
     assert pedido_lanchonete(100,2) == 'O total a ser pago é: 9.00 R$'
     assert pedido_lanchonete(100,2) == 'O total a ser pago é: 9.00 R$'
 
 
-def cachorro_quente_duplo():
-    assert pedido_lanchonete(101, 2) == 11.00
+def test_cachorro_quente_duplo():
+    assert pedido_lanchonete(101, 2) == 'O total a ser pago é: 11.00 R$'
 
 
-def x_egg():
-    assert pedido_lanchonete(102, 2) == 12.00
+def test_x_egg():
+    assert pedido_lanchonete(102, 2) == 'O total a ser pago é: 12.00 R$'
 
 
-def x_salada():
-    assert pedido_lanchonete(103, 2) == 12.00
+def test_x_salada():
+    assert pedido_lanchonete(103, 2) == 'O total a ser pago é: 12.00 R$'
 
 
-def x_bacon():
-    assert pedido_lanchonete(104, 2) == 14.00
+def test_x_bacon():
+    assert pedido_lanchonete(104, 2) == 'O total a ser pago é: 14.00 R$'
 
 
-def x_tudo():
-    assert pedido_lanchonete(105, 2) == 17.00
+def test_x_tudo():
+    assert pedido_lanchonete(105, 2) == 'O total a ser pago é: 17.00 R$'
 
 
-def refri():
-    assert pedido_lanchonete(106, 2) == 5.00
+def test_refri():
+    assert pedido_lanchonete(106, 2) == 'O total a ser pago é: 5.00 R$'
 
 
-def cha_gelado():
-    assert pedido_lanchonete(107, 2) == 4.00
+def test_cha_gelado():
+    assert pedido_lanchonete(107, 2) == 'O total a ser pago é: 4.00 R$'
