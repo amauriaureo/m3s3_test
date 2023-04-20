@@ -20,3 +20,16 @@ class Calcular:
     def frete():
         calcular_frete(volume, multiplicador_peso, multiplicador_rota)
 
+
+class Peca:
+    def cadastrar():
+        cadastrar_peca()
+
+    def imprimir():
+        imprimir_peca(peca)
+
+    def consultar():
+        consultar_pecas()
+
+    def remover():
+        remover_peca()
