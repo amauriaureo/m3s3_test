@@ -33,3 +33,19 @@ class Peca:
 
     def remover():
         remover_peca()
+
+
+def medida():
+    validar_medida(medida)
+
+
+def peso():
+    ler_peso_objeto()
+
+
+def rota():
+    ler_rota()
+
+
+def codigo():
+    gerar_codigo()
